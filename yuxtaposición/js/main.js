@@ -3,13 +3,22 @@ let superior = document.getElementById("eSup");
 
 let isResizing = draggable = false;
 let lastClickPos;
-let sizeBorder = yuxContainer.getBoundingClientRect().width;
+let sizeBorder;
 let posBorderSup;
 
 window.onload = function () {
+    sizeBorder = yuxContainer.getBoundingClientRect().width;
     superior.style.backgroundSize = `${sizeBorder}px 100%`;
     posBorderSup = superior.getBoundingClientRect().right;
 };
+
+window.onresize = function () {
+    debugger;
+    sizeBorder = yuxContainer.getBoundingClientRect().width;
+    superior.style.backgroundSize = `${sizeBorder}px 100%`;
+    superior.style.width = "51.79%";
+    posBorderSup = superior.getBoundingClientRect().right;
+}
 
 superior.onmousedown = function (event) {
     if (draggable) {
@@ -30,8 +39,15 @@ yuxContainer.onmousemove = function (event) {
     } else if (posBorderSup - event.clientX > -100 && posBorderSup - event.clientX < 100) {
         if (lastClickPos !== event.clientX) {
             let deltaX = event.clientX - lastClickPos;
-            if (superior.offsetWidth + deltaX < yuxContainer.offsetWidth)
-                superior.style.width = `${superior.offsetWidth + deltaX}px`;
+            let newWidth = superior.offsetWidth + deltaX;
+            if (newWidth < yuxContainer.offsetWidth && newWidth > 20)
+                superior.style.width = `${newWidth}px`;
+            else {
+                superior.style.width = newWidth > yuxContainer.offsetWidth ?
+                    `${yuxContainer.offsetWidth}px` : `${20}px`;
+                draggable = false;
+                isResizing = false;
+            }
             posBorderSup = superior.getBoundingClientRect().right;
             lastClickPos = event.clientX;
         }

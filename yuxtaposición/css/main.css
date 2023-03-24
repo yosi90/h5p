@@ -23,10 +23,11 @@ body #yuxtaposicion div {
   top: 0;
   left: 0;
   height: 100%;
+  background-repeat: no-repeat;
 }
 body #yuxtaposicion div:nth-child(1) {
   box-sizing: border-box;
-  width: 50%;
+  width: 51.79%;
   background-image: url(../media/img/fondoFilter.jpg);
   border-right: 20px double white;
   z-index: 1;
