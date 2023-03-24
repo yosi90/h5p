@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(63, 63, 63);
+  margin: 0;
+}
+body select {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+body #yuxtaposicion {
+  position: relative;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+body #yuxtaposicion div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+body #yuxtaposicion div:nth-child(1) {
+  box-sizing: border-box;
+  width: 50%;
+  background-image: url(../media/img/fondoFilter.jpg);
+  border-right: 20px double white;
+  z-index: 1;
+}
+body #yuxtaposicion div:nth-child(2) {
+  width: 100%;
+  background-size: 100% 100%;
+  background-image: url(../media/img/fondo.jpg);
+}/*# sourceMappingURL=main.css.map */
