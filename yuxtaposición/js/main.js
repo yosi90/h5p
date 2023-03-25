@@ -13,7 +13,6 @@ window.onload = function () {
 };
 
 window.onresize = function () {
-    debugger;
     sizeBorder = yuxContainer.getBoundingClientRect().width;
     superior.style.backgroundSize = `${sizeBorder}px 100%`;
     superior.style.width = "51.79%";

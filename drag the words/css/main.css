@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(63, 63, 63);
+  margin: 0;
+}
+body #dragWords {
+  width: 80vw;
+  height: 70vh;
+  background-color: white;
+  box-shadow: 3px 3px 5px black;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: auto;
+  padding: 30px 30px;
+}
+body #dragWords .test {
+  position: relative;
+  background-color: rgb(241, 241, 241);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+body #dragWords .test::before {
+  position: absolute;
+  top: -12px;
+  content: "Rellena los huecos";
+  background-color: rgb(241, 241, 241);
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 2px 10px;
+}
+body #dragWords .test p {
+  display: flex;
+  align-content: center;
+}
+body #dragWords .test p .dropzone {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 100px;
+  height: 22px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+body #dragWords .words {
+  display: flex;
+  min-height: 40px;
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+  border-radius: 6px;
+  gap: 4px;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+body #dragWords .words .drag {
+  display: inline-flex;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: grab;
+  padding: 4px;
+}/*# sourceMappingURL=main.css.map */
