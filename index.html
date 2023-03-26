@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+
+            height: 100vh;
+
+            background-color: rgb(78, 78, 78);
+
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+
+            border-bottom: 1px solid black;
+
+            padding: 20px 0;
+            margin: 0 5% 0 5%;
+        }
+
+        .container {
+            width: 80vw;
+            height: 80vh;
+
+            background-color: rgb(226, 226, 226);
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px black;
+
+            overflow: hidden;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-flow: row wrap;
+
+            width: 100%;
+
+            overflow: auto;
+
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .btn {
+            min-width: 300px;
+
+            font-size: 30px;
+            text-align: center;
+
+            border: 1px solid black;
+            border-radius: 5px;
+
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Html 5 "plugins"</h1>
+        <div class="links">
+            <a href="drag the words/index.html">
+                <div class="btn">Drag the words</div>
+            </a>
+            <a href="flashcards/index.html">
+                <div class="btn">Flash cards</div>
+            </a>
+            <a href="yuxtaposición/index.html">
+                <div class="btn">Yuxtaposición</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+            <a href="#">
+                <div class="btn">Dame ideas</div>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    const opts = document.querySelectorAll('.btn');
+    opts.forEach(function callback(e, index) {
+        e.style.backgroundColor = `hsl(${(index * 360) / opts.length}, 100%, 50%)`;
+    });
+</script>
+
+</html>

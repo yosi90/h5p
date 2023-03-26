@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="flashcards">
+        <div class="fcHeader">
+            <p>Adivina el Streamer</p>
+        </div>
+        <div class="fcBody">
+            <p id="countCards">0/0</p>
+            <div id="cards">
+                <div class="card active" index="1">
+                    <div class="gris"></div>
+                    <div class="imgContainer">
+                        <div class="frame">
+                            <img src="media/img/mondongo.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="hint"><p>Mondongo...</p></div>
+                    <div class="answerContainer">
+                        <input type="text" name="answer" id="answer" placeholder="Tu respuesta">
+                        <input type="button" id="validar" value="Validar">
+                    </div>
+                </div>
+                <div class="card" index="2">
+                    <div class="gris"></div>
+                    <div class="imgContainer">
+                        <div class="frame">
+                            <img src="media/img/pipo.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="hint"><p>Contigo pipo🎶...</p></div>
+                    <div class="answerContainer">
+                        <input type="text" name="answer" id="answer" placeholder="Tu respuesta">
+                        <input type="button" id="validar" value="Validar">
+                    </div>
+                </div>
+                <div class="card" index="3">
+                    <div class="gris"></div>
+                    <div class="imgContainer">
+                        <div class="frame">
+                            <img src="media/img/virtualhero.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="hint"><p>Virtual hero...</p></div>
+                    <div class="answerContainer">
+                        <input type="text" name="answer" id="answer" placeholder="Tu respuesta">
+                        <input type="button" id="validar" value="Validar">
+                    </div>
+                </div>
+                <div class="card" index="4">
+                    <div class="gris"></div>
+                    <div class="imgContainer">
+                        <div class="frame">
+                            <img src="media/img/a pedra.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="hint"><p>A pedra...</p></div>
+                    <div class="answerContainer">
+                        <input type="text" name="answer" id="answer" placeholder="Tu respuesta">
+                        <input type="button" id="validar" value="Validar">
+                    </div>
+                </div>
+                <div class="card" index="5">
+                    <div class="gris"></div>
+                    <div class="imgContainer">
+                        <div class="frame">
+                            <img src="media/img/hueco.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="hint"><p>Rogue souls...</p></div>
+                    <div class="answerContainer">
+                        <input type="text" name="answer" id="answer" placeholder="Tu respuesta">
+                        <input type="button" id="validar" value="Validar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fcFooter">
+            <div id="pre" class="btn"><</div>
+            <div id="progressContainer">
+                <div id="progress"></div>
+            </div>
+            <div id="sig" class="btn">></div>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>

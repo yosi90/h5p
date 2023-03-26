@@ -1,1 +1,20 @@
 $fondo: rgb(63, 63, 63)
+    
+@mixin basicFlex()
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin base()
+    *
+        box-sizing: border-box
+
+    body
+        @include basicFlex()
+
+        height: 100vh
+
+        background-color: $fondo
+
+        margin: 0
+    

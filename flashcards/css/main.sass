@@ -1,0 +1,214 @@
+@import ../../sass/_globals
+
+@include base
+
+#flashcards
+    display: flex
+    flex-flow: column nowrap
+
+    width: 60vw
+    min-width: 600px
+    max-width: 1090px
+    height: 75vh
+    max-height: 800px
+
+    font-family: Arial, Helvetica, sans-serif
+
+    background-color: #27344E
+    border: 1px solid white
+    border-radius: 10px
+
+    .fcHeader
+
+        text-align: center
+        color: white
+
+        border-bottom: 1px solid white
+
+        margin: 0 30px
+
+    .fcBody
+        display: flex
+        flex-flow: column nowrap
+
+        height: 100%
+
+        overflow: hidden
+
+        #countCards
+            text-align: center
+            color: white
+
+        #cards
+            position: relative
+            
+            height: 100%
+
+            padding: 10px 0px
+
+            overflow: hidden
+
+            .card
+                display: flex
+                flex-flow: column nowrap
+
+                position: absolute
+                top: 20px
+                bottom: 20px
+                left: 0
+                right: 0
+
+                width: 310px
+                max-height: 360px
+
+                background-color: white
+                box-shadow: 0 0 23px 4px rgba(0,0,0,.31)
+                border-radius: 15px
+
+                transition: all .7s
+                overflow: hidden
+
+                margin: auto
+
+                .gris
+                    position: absolute
+                    top: 0
+                    right: 0
+
+                    width: 100%
+                    height: 100%
+
+                    background-color: rgba(156, 156, 156, 0.7)
+                    border-radius: 15px
+
+                    z-index: 1
+
+                .imgContainer
+                    @include basicFlex
+
+                    height: calc( 100% - 130px )
+
+                    background-color: #cbe7f3
+
+                    transition: 1s
+
+                    padding: 30px 12px
+
+                    .frame
+                        width: 100%
+                        height: 100%
+
+                        background-color: white
+                        border-radius: 8px
+                        box-shadow: 0 0 2px black
+
+                        padding: 5px
+
+                        img
+                            width: 100%
+                            height: 100%
+
+                            border-radius: 5px
+
+
+                .hint
+                    text-align: center
+
+                .answerContainer
+                    display: flex
+                    flex-flow: row nowrap
+
+                    padding: 5px 25px 20px 25px
+
+                    #answer
+                        flex: 1 1 auto
+
+                        border-style: solid 
+                        border-top-left-radius: 50px
+                        border-bottom-left-radius: 50px
+                        border-right: none
+
+                        padding: 10px 15px
+
+                        &:focus-visible
+                            outline: none
+                            border: 2px solid rgb(79, 165, 199)
+                            border-right: none
+                            box-shadow: 0 0 4px rgb(52, 140, 175), inset 0 0 4px rgb(52, 140, 175)
+                    
+                    #validar
+                        color: white
+
+                        background-color: #2A64E8
+                        border: none
+                        border-top-right-radius: 50px
+                        border-bottom-right-radius: 50px
+
+                        padding: 0 15px
+
+                        &:hover
+                            background-color: #62bae2
+
+                            cursor: pointer
+
+
+            .active
+                top: 10px
+                bottom: 10px
+
+                z-index: 2
+
+                .gris
+                    display: none
+
+                .imgContainer
+                    border-top-left-radius: 10px
+                    border-top-right-radius: 10px
+
+                    margin: 15px 15px 0 15px
+
+    .fcFooter
+        display: grid
+        grid-template: 1fr / 60px 1fr 60px
+        align-items: center
+
+        #progressContainer
+            justify-self: center
+            width: 260px
+            height: 12px
+
+            border: 1px solid #5f6c87
+            border-radius: 50px
+
+            padding: 2.5px
+            margin: 20px 0
+
+            #progress
+                height: 100%
+                background-color: #7CF0BD
+                border-radius: 50px
+
+                transition: .7s linear
+        
+        .btn
+            color: white
+            
+            border: 1px solid black
+            border-radius: 50px
+            box-shadow: 0 0 23px 4px rgba(0,0,0,.31)
+
+            padding: 10px 30px
+
+            &:hover
+                cursor: pointer
+
+        #pre
+            justify-self: flex-start
+
+            margin-left: 10px
+
+        #sig
+            justify-self: flex-end
+
+            margin-right: 10px 
+
